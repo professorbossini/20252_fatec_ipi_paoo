@@ -1,3 +1,62 @@
+function saudacoesFactory(saudacao, nome){
+  let a
+  return function(){
+    console.log(`${saudacao}, ${nome}`)
+  }
+}
+
+let olaJoao = saudacoesFactory('ola', 'joao')
+let tchauJoao = saudacoesFactory('tchau', 'joao')
+olaJoao()
+tchauJoao()
+
+// function ola(){
+//   let nome = 'João'
+//   return function(){
+//     console.log(`Ola, ${nome}`)
+//   }
+// }
+// let olaResult = ola()
+
+// olaResult()
+
+
+// function f(){
+//   let nome = 'João'
+//   function g(){
+//     console.log(nome)
+//   }
+//   g()
+// }
+// f()
+
+
+// //closures
+// let umaFuncao = function(){
+//   console.log('Fui armazenada em uma variável')
+// }
+// //umaFuncao()
+// function f(funcao){
+//   funcao()
+// }
+// //f(umaFuncao())
+// function g(){
+//   function outraFuncao(){
+//     console.log('Fui criada por g')
+//   }
+//   return outraFuncao
+// }
+// f(g())()
+// f(g)
+// g()()
+// const gResult = g()
+//gResult()
+
+// f(function(){
+//   console.log("Sou uma function passada para f")
+// })
+// f(() => console.log("Sou uma arrow passada para f"))
+
 //vetores, parte 2
 // mapreduce
 // const valores = [1, 2, 3, 4]
