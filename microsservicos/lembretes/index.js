@@ -14,12 +14,17 @@ app.use(express.json())
     2: {id: 2, texto: 'Ir à feira'} 
   }
 */
-let id = 1
+let id = 0
 const lembretes = {}
 //definindo um endpoint que permite que lembretes sejam cadastrados
 //POST /lembretes (req, res) => {}
 app.post('/lembretes', function(req, res){
-
+  id++
+  const texto = req.body.texto
+  // const lembrete = { id: id, texto: texto}
+  const lembrete = { id, texto }
+  lembretes[id] = lembrete
+  res.status(201).json(lembrete)
 })
 
 //definindo um endpoint que permite que a coleção de lembretes seja obtida
