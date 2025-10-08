@@ -37,6 +37,12 @@ app.get('/lembretes/:id/observacoes', (req, res) => {
   res.status(200).json(observacoesPorLembrete[req.params.id] || [])
 })
 
+app.post('/eventos', (req, res) => {
+  const evento = req.body
+  console.log(evento)
+  res.end()
+})
+
 const port = 5000
 app.listen(port, () => console.log(`Observações. Porta ${port}.`))
 

@@ -1,10 +1,9 @@
 {
-  "name": "lembretes",
+  "name": "barramento",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "node --watch index.js",
-    "start": "node index.js"
+    "dev": "node --watch index.js"
   },
   "keywords": [],
   "author": "",
